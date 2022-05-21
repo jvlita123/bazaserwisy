@@ -1,0 +1,24 @@
+﻿@page
+@model HistoryModel
+
+@{
+    ViewData["Title"] = "History";
+}
+
+<h1>History</h1>
+
+<h4>Person</h4>
+<hr />
+
+
+
+<div class="text-center">
+    <p>
+        Liczba rekordów zapisanych w bieżącym dniu: @Model.AllRecords.Count obiektów.<br /> Lista
+         osób:<br />
+    </p>
+    @foreach (var item in Model.AllRecords.People)
+    {
+        <p>@item.FullName</p>
+    }
+</div>
